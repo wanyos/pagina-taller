@@ -1,110 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Mobauto</title>
-    <script type="module" crossorigin src="/pagina-taller/assets/index-f8ae2612.js"></script>
-    <link rel="stylesheet" href="/pagina-taller/assets/index-f1bf6414.css">
-  </head>
-  <body>
-    
-    <header>
-      <nav class="nav container">
 
-        <div class="container-lista">
-          <ul class="nav__link">
-            <li class="nav__item">
-              <a class="nav__links" href="#">Inicio</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__links" href="#">Servicios</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__links" href="#">Ofertas</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__links" href="#">Contacto</a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="data:image/png;base64,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" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <title>Mobauto</title>
+  <script type="module" crossorigin src="/pagina-taller/assets/index-7deac3de.js"></script>
+  <link rel="stylesheet" href="/pagina-taller/assets/index-e3095776.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav container">
+
+      <div class="container-lista">
+        <ul class="nav__link">
+          <li class="nav__item">
+            <a class="nav__links" href="#">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__links" href="#">Servicios</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__links" href="#">Ofertas</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__links" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contenedor-contacto">
+
+        <div class="contenedor-contacto__item">
+          <box-icon class="icon" color="white" name='contact' type='solid'></box-icon>
+          <p class="parrafo"> C/Alamo 44 <span>-</span> Humanes de Madrid</p>
         </div>
 
-        <div class="contenedor-contacto">
-          <p class="parrafo"><box-icon color="white" name='contact' type='solid' ></box-icon> C/Alamo 44, Humanes de Madrid (Madrid)</p>
-          <p class="parrafo"><box-icon color="white" name='envelope' ></box-icon> mobauto@hotmail.com</p>
-          <p class="parrafo"><box-icon color="white" name='phone'></box-icon> 91 604 25 25 // 628 456 458 </p>
-          <p class="parrafo"><box-icon color="white" name='time'></box-icon> Lunes a Viernes 8:00-14:00  16:30-19:30</p>
-        </div>
-      
-        <div class="logo">
-          <img src="/pagina-taller/assets/logo_mobauto-04daa41f.png" alt="">
-          <p class="parrafo-logo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ratione voluptatum tempore doloremque culpa! Minima error totam natus unde earum eius eum maxime exercitationem veritatis.</p>
-        </div>
-     
-      </nav>
-    </header>
-
-    <main class="main">
-
-      <section class="seccion-servicios">
-          <h2>Nuestros Servicios</h2>
-
-        <div class="container-card">
-
-          <div class="card">
-            <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
-            <h3>Mecanica</h3>
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut, incidunt saepe suscipit nulla obcaecati quasi.</p>
-          </div>
-
-          <div class="card">
-            <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
-            <h3>Pintura</h3>
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut, incidunt saepe suscipit nulla obcaecati quasi.</p>
-          </div>
-
-          <div class="card">
-            <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
-            <h3>Pre-Itv</h3>
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut, incidunt saepe suscipit nulla obcaecati quasi.</p>
-          </div>
-
-          <div class="card">
-            <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
-            <h3>Diagnosis</h3>
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut, incidunt saepe suscipit nulla obcaecati quasi.</p>
-          </div>
-
-          <div class="card">
-            <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
-            <h3>Ruedas</h3>
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut, incidunt saepe suscipit nulla obcaecati quasi.</p>
-          </div>
-
-          <div class="card">
-            <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
-            <h3>Chapa</h3>
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut, incidunt saepe suscipit nulla obcaecati quasi.</p>
-          </div>
-
+        <div class="contenedor-contacto__item">
+          <box-icon class="icon" color="white" name='envelope'></box-icon>
+          <p class="parrafo">mobauto@hotmail.com</p>
         </div>
 
-        
+        <div class="contenedor-contacto__item">
+          <box-icon class="icon" color="white" name='phone'></box-icon>
+          <p class="parrafo"> 91 604 25 25 <span>-</span> 628 456 458 </p>
+        </div>
 
-      </section>
+        <div class="contenedor-contacto__item">
+          <box-icon class="icon" color="white" name='time'></box-icon>
+          <p class="parrafo"> Lunes a Viernes <span></span> 8:00-14:00 <span></span> 16:30-19:30</p>
+        </div>
 
-    </main>
+      </div>
 
-    
-    <footer>
+      <div class="logo">
+        <img src="/pagina-taller/assets/logo_mobauto-04daa41f.png" alt="">
+        <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ratione voluptatum tempore
+          doloremque culpa! Minima error totam natus unde earum eius eum maxime exercitationem veritatis.</p>
+      </div>
 
-    </footer>
+    </nav>
+  </header>
 
-   
+  <main class="main">
+
+    <section class="seccion-servicios">
+      <h2>Nuestros Servicios</h2>
+
+      <div class="container-card">
+
+        <div class="card">
+          <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
+          <h3>Mecanica</h3>
+          <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut,
+            incidunt saepe suscipit nulla obcaecati quasi.</p>
+        </div>
+
+        <div class="card">
+          <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
+          <h3>Pintura</h3>
+          <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut,
+            incidunt saepe suscipit nulla obcaecati quasi.</p>
+        </div>
+
+        <div class="card">
+          <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
+          <h3>Pre-Itv</h3>
+          <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut,
+            incidunt saepe suscipit nulla obcaecati quasi.</p>
+        </div>
+
+        <div class="card">
+          <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
+          <h3>Diagnosis</h3>
+          <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut,
+            incidunt saepe suscipit nulla obcaecati quasi.</p>
+        </div>
+
+        <div class="card">
+          <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
+          <h3>Ruedas</h3>
+          <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut,
+            incidunt saepe suscipit nulla obcaecati quasi.</p>
+        </div>
+
+        <div class="card">
+          <img src="/pagina-taller/assets/motor (2)-2437f626.jpg" alt="">
+          <h3>Chapa</h3>
+          <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus unde repellendus aut,
+            incidunt saepe suscipit nulla obcaecati quasi.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="seccion-ubicacion">
+      <div class="contenedor-ubicacion">
+        <h2>Ubicación</h2>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.488030977062!2d-3.812612448896811!3d40.26490797268164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418b423a06d9d7%3A0xec2f0059c99efac1!2sC.%20del%20%C3%81lamo%2C%2044%2C%2028970%20Humanes%20de%20Madrid%2C%20Madrid!5e0!3m2!1ses!2ses!4v1675164041689!5m2!1ses!2ses"></iframe>
+      </div>
+    </section>
+
+    <section class="seccion-formulario">
+      <div class="contenedor-formulario">
+        <h2>Formulario Contacto</h2>
+        <form action="mailto:juanjor99@gmail.com" method="post">
+
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" placeholder="Nombre usuario">
+
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Email usuario">
+
+          <label for="asunto">Asunto</label>
+          <input type="text" name="asunto" placeholder="Asunto mensaje">
+
+          <label for="mensaje">Mensaje</label>
+          <textarea name="mensaje" cols="30" rows="10"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+
+  </footer>
+
+
+
   
-    
-    
-  </body>
+
+</body>
+
 </html>
